@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <ImageView
+        android:id="@+id/ivTextImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/thirtydp"
+        android:src="@drawable/footer_email_verify" />
+
+    <EditText
+        android:id="@+id/evEmailPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivTextImage"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/fifteen"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_marginTop="@dimen/thirtydp"
+        android:background="@drawable/ev_bg"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="@dimen/ten"
+        android:text=""
+        android:textSize="@dimen/eightteen" />
+
+    <TextView
+        android:id="@+id/tvPrivatePin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/evEmailPhone"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/fifteen"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/fifteen"
+        android:text="A private pin will be sent via sms"
+        android:textColor="#2370d9" />
+
+    <RelativeLayout
+        android:id="@+id/rlVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/header_bg" >
+
+        <ImageView
+            android:id="@+id/ivBtnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            android:layout_marginLeft="@dimen/ten"
+            android:src="@drawable/footer_verify" />
+
+        <ImageView
+            android:id="@+id/ivVerifyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/twenty"
+            android:src="@drawable/forgot_next_icon" />
+    </RelativeLayout>
+
+</RelativeLayout>

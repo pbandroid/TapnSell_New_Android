@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/rlheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlheader"
+        android:background="@drawable/priview_listing_title" >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_toLeftOf="@+id/ivNameEdit"
+            android:singleLine="true"
+            android:text="asdasdasd asdasd sadasdsa"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fifteen" />
+
+        <ImageView
+            android:id="@+id/ivNameEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/ten"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/twentyfive"
+            android:paddingTop="10dp"
+            android:src="@drawable/priview_listing_edit_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_below="@+id/rlTitle"
+        android:layout_margin="@dimen/five"
+        android:background="@drawable/priview_listing_main_frame"
+        android:paddingBottom="@dimen/five"
+        android:paddingLeft="@dimen/five"
+        android:paddingTop="@dimen/five" >
+
+        <RelativeLayout
+            android:id="@+id/rlMainProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/llImageVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="420dp"
+                android:orientation="vertical"
+                android:weightSum="4.5" >
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="@dimen/five"
+                            android:background="@drawable/pd_image_frame"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/iv2"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="@dimen/five"
+                            android:background="@drawable/pd_image_frame"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/iv3"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="@dimen/five"
+                            android:background="@drawable/pd_image_frame"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/iv4"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="@dimen/five"
+                            android:background="@drawable/pd_image_frame"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/rlVideo"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/pd_video_bg" >
+
+                    <ImageView
+                        android:id="@+id/iv1ad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/five"
+                        android:src="@drawable/pd_video_icon" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMainImage"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_toRightOf="@+id/llImageVideo"
+                android:src="@drawable/priview_listing_default_img_bg" >
+
+                <ImageView
+                    android:id="@+id/ivDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:id="@+id/rlPrice"
+                    android:layout_width="@dimen/twohundread"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/five" >
+
+                    <RelativeLayout
+                        android:id="@+id/ivLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pitcher_priview_right" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/priview_listing_cost_edit_icon" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ivLeft"
+                        android:background="@drawable/pitcher_priview_center"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:maxLength="15"
+                        android:singleLine="true"
+                        android:text="1232"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/fifteen" />
+
+                    <TextView
+                        android:id="@+id/tvPriceType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tvPrice"
+                        android:background="@drawable/pitcher_priview_left"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="2dp"
+                        android:text="$"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/fifteen" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivImageEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingTop="@dimen/fifteen"
+                    android:src="@drawable/priview_listing_edit_icon" />
+            </RelativeLayout>
+
+          
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- </ScrollView> -->
+
+    <RelativeLayout
+        android:id="@+id/rlPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/thirtyfivedp"
+        android:layout_marginLeft="@dimen/fifteen"
+        android:layout_marginRight="@dimen/fifteen"
+        android:background="@drawable/priview_listing_post_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Post"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/twenty" />
+    </RelativeLayout>
+
+</RelativeLayout>

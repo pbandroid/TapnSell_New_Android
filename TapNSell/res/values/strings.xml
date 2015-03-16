@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TapnSell</string>
+    <string name="action_settings">Settings</string>
+     
+   
+    <string name="hello_world">Hello world!</string>
+     
+       <string name="FaceBookAppID">787251714696941</string>
+<!-- <string name="FaceBookAppID">1391966714442687</string> -->
+
+      <!--  <string name="mapkey">AIzaSyCJjiFBEgDQsYrpLuKwL6ZxkFbzkoaY7Uc</string> -->
+       <string name="mapkey">AIzaSyANqnv3VsYH83fWluuQyPmMYTAGVCitWfE</string>
+       
+         <string name="Wait">Please wait...</string>
+  <string name="use">Use     >></string>
+  
+<string name="plus_example_deep_link_url">https://developers.google.com/+/mobile/android/</string>
+    <string name="plus_example_deep_link_id">/+/mobile/android/</string>
+</resources>

@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <SurfaceView
+            android:id="@+id/SvCamera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/bottam_transperant"
+           />
+
+        <ImageView
+            android:id="@+id/ivBgBlue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="65dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/video_dialog_video_bg"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/twenty"
+            android:background="@drawable/flash_back"
+            android:paddingRight="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivFlashIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/five"
+                android:src="@drawable/flash_icon_off" />
+
+            <TextView
+                android:id="@+id/tvFlashText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_toRightOf="@+id/ivFlashIcon"
+                android:text="OFF"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivclsbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/eightteen"
+            android:paddingBottom="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/takepitcer_closebtn"
+            android:visibility="gone" />
+        
+        
+    <ImageView
+        android:id="@+id/bottam_transperant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/tack_pic_botam_bg"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBotom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/capture_bg" >
+
+        <ImageView
+            android:id="@+id/ivGallery"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/thirtyfivedp"
+            android:padding="@dimen/five"
+            android:src="@drawable/take_pitchure_gallery" />
+
+        <ImageView
+            android:id="@+id/ivDropBox"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/thirtyfivedp"
+            android:layout_toRightOf="@+id/ivGallery"
+            android:padding="@dimen/five"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropbox"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/takepitcer_previeimg" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="52dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/camera_capture_icon" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnUse"
+            android:layout_width="@dimen/eightydp"
+            android:layout_height="@dimen/thirtydp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="72dp"
+            android:background="@drawable/takepitcher_green_btn"
+            android:text="Done"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fifteen" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/include1"
+        android:scaleType="fitXY"
+        android:src="@drawable/tap_board_earning_logo" />
+
+    <LinearLayout
+        android:id="@+id/llTotal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seventydp"
+        android:layout_below="@+id/ivLogo"
+        android:layout_marginTop="@dimen/five"
+        android:background="@drawable/tap_board_earning_total_bg"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/five"
+            android:text="Total:"
+            android:textColor="#70858e"
+            android:textSize="@dimen/twentyfive"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEarn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/five"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#4196ff"
+            android:textSize="@dimen/fourtydp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTotal"
+        android:layout_marginBottom="@dimen/five"
+        android:src="@drawable/tap_board_earning_show_freind" />
+
+    <LinearLayout
+        android:id="@+id/llBottam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/ivTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:layout_weight="1"
+            android:src="@drawable/login_twitter" />
+
+        <ImageView
+            android:id="@+id/ivGooglePlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:layout_weight="1"
+            android:src="@drawable/login_google" />
+
+        <ImageView
+            android:id="@+id/ivFb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:layout_weight="1"
+            android:src="@drawable/login_facebook" />
+    </LinearLayout>
+
+</RelativeLayout>

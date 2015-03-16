@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainbg" >
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header_bg" >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five"
+            android:src="@drawable/back"
+            android:textColor="@android:color/white" />
+   
+        <com.convertingoffers.tapnsell.util.CustomTextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:shadowColor="#11000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:text="Sell it Faster!"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+
+           <ImageView
+            android:id="@+id/ivMenuSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/ten"
+            android:paddingLeft="@dimen/fifteen"
+            android:paddingBottom="@dimen/five"
+            android:src="@drawable/shar_skip" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlHeader"
+        android:background="@drawable/sc_tv_bg"
+        android:gravity="center"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+       android:text="Email Listing to your freinds"
+        android:textSize="29sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:background="@drawable/sc_tv_bg1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <EditText
+            android:id="@+id/evSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sc_ev_search"
+            android:singleLine="true"
+            android:textSize="30sp"
+            android:drawableLeft="@drawable/ev_search_icon"
+            android:paddingLeft="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlSearch"
+        android:background="@drawable/sc_title_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five"
+            android:text="Select All"
+            android:textColor="#363636"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:src="@drawable/sc_all_bg" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvContact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottam"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rl22"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/rlBottam"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seventydp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sell_it_faster_shar_bg"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/ivShar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/sell_it_faster_shar" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

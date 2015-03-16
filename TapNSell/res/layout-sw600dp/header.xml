@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:customFont="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/header_bg" >
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="5dp"
+        android:src="@drawable/back"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <com.convertingoffers.tapnsell.util.CustomTextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:layout_toLeftOf="@+id/ivMenu"
+        android:layout_toRightOf="@+id/ivBack"
+        android:gravity="center"
+        android:shadowColor="#11000000"
+        android:textStyle="bold"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/eightteen" />
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/five"
+        android:src="@drawable/setting_btn"
+        android:visibility="invisible" />
+
+</RelativeLayout>

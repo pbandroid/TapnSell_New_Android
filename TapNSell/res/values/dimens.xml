@@ -1,0 +1,46 @@
+<resources>
+    <dimen name="two">2dp</dimen>
+<dimen name="three">3dp</dimen>
+	<dimen name="five">5dp</dimen>
+	<dimen name="six">6dp</dimen>
+	<dimen name="eight">8dp</dimen>
+	<dimen name="ten">10dp</dimen>
+	<dimen name="twelve">12dp</dimen>
+		<dimen name="forteen">14dp</dimen>
+	
+	<dimen name="chkfont">13dp</dimen>
+	<dimen name="fifteen">15dp</dimen>
+	<dimen name="eightteen">18dp</dimen>
+	<dimen name="twenty">20dp</dimen>
+	<dimen name="twentyfive">25dp</dimen>
+	<dimen name="thirtydp">30dp</dimen>
+	<dimen name="thirtyfivedp">35dp</dimen>
+	<dimen name="fourtydp">40dp</dimen>
+	<dimen name="fourtyfivedp">45dp</dimen>
+	<dimen name="fiftydp">50dp</dimen>
+	<dimen name="fiftyfivedp">55dp</dimen>
+	<dimen name="sixtydp">60dp</dimen>
+	<dimen name="sixtyFivedp">65dp</dimen>
+	<dimen name="seventydp">70dp</dimen>
+	<dimen name="RoundedImage">70dp</dimen>
+		<dimen name="seventyfivedp">75dp</dimen>
+	<dimen name="eightydp">80dp</dimen>
+	<dimen name="ninetydp">90dp</dimen>
+	<dimen name="hundreddp">100dp</dimen>
+	<dimen name="onetendp">110dp</dimen>
+	<dimen name="onetwentydp">120dp</dimen>
+	<dimen name="onethirtydp">130dp</dimen>
+	<dimen name="onefourtydp">140dp</dimen>
+	<dimen name="oneefiftydp">150dp</dimen>
+	<dimen name="onesixty">160dp</dimen>
+	<dimen name="oneseventy">170dp</dimen>
+	<dimen name="oneeighty">180dp</dimen>
+	<dimen name="oneninety">190dp</dimen>
+	<dimen name="twohundread">200dp</dimen>
+	<dimen name="twoten">210dp</dimen>
+	<dimen name="twotwenty">220dp</dimen>
+	<dimen name="twothirty">230dp</dimen>
+	<dimen name="t_hundred">300dp</dimen>
+		<dimen name="threehundred">300dp</dimen>
+	<dimen name="fourhundred">400dp</dimen>
+</resources>

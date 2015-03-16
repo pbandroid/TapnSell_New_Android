@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tb_bg"
+    android:gravity="center_horizontal" >
+
+    <include
+        android:id="@+id/rlheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlheader"
+        android:background="@drawable/cat_search_bg" >
+
+        <EditText
+            android:id="@+id/evsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:background="@drawable/cat_search_btn"
+            android:drawableLeft="@drawable/cat_ev_search_icon"
+            android:drawableRight="@drawable/cat_go_btn"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:hint="Search"
+            android:paddingLeft="@dimen/ten"
+            android:paddingRight="@dimen/three"
+            android:singleLine="true"
+            android:drawablePadding="@dimen/five"
+            android:text=""
+            android:imeOptions="actionDone"
+            android:textColor="#30ffffff"
+            android:textSize="@dimen/eightteen" />
+
+        <ImageView
+            android:id="@+id/ivGobtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_alignParentRight="true"
+            android:background="@drawable/cat_go_btn_transperent" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gvCatListing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlSearch"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+       
+        android:padding="@dimen/five"
+        android:horizontalSpacing="@dimen/five"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:verticalSpacing="@dimen/five" />
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/order_list_child_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/five" >
+
+        <ImageView
+            android:id="@+id/ivMyOrderImage"
+            android:layout_width="@dimen/fourtydp"
+            android:layout_height="@dimen/fourtydp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/order_user_image" />
+
+        <TextView
+            android:id="@+id/tvMyOrderItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivMyOrderImage"
+            android:gravity="left"
+            android:paddingLeft="@dimen/ten"
+            android:singleLine="true"
+            android:text="sadsadasdasd sad"
+            android:textColor="#334153"
+            android:textSize="32sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twohundread"
+      android:scaleType="centerCrop"
+        android:layout_below="@+id/rlTop"
+        android:src="@drawable/needfeedback_default_bg"  />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/ivUserImage"
+        android:background="@drawable/feedback_rate_bg"
+        android:paddingLeft="@dimen/five"
+        android:paddingRight="@dimen/five" >
+
+        <RelativeLayout
+            android:id="@+id/rlRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/feedback_rate_btn_bg" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/feedback_rate_icon" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv3"
+                android:layout_toRightOf="@+id/iv1"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:singleLine="true"
+                android:text="Rate as dfs"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/twenty"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/rate_feedback_arrow" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

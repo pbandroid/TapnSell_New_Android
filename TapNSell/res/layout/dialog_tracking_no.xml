@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@drawable/dialog_counter_bg" />
+
+        <LinearLayout
+            android:id="@+id/llUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivClose"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/ten"
+            android:orientation="vertical"
+            android:padding="@dimen/five" >
+        </LinearLayout>
+
+        <com.convertingoffers.tapnsell.util.CustomTextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivClose"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:shadowColor="#11000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:text="Enter Tracking Number"
+            android:textColor="#646e7b"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/evTrackingNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHeader"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:layout_marginTop="@dimen/five"
+            android:background="@drawable/dialog_tracking_no_ev"
+            android:hint="Enter Tracking Number"
+            android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five"
+            android:textSize="@dimen/eightteen"
+            android:textColor="#aeaeae" />
+
+        <RelativeLayout
+            android:id="@+id/rlCarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/evTrackingNo"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:layout_marginTop="@dimen/five"
+            android:background="@drawable/dialog_tracking_no_spinner"
+            android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five" >
+
+            <TextView
+                android:id="@+id/tvCarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text="USPS"
+                android:gravity="center"
+                android:textColor="#aeaeae"
+                android:textSize="@dimen/eightteen" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivSeperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlCarrier"
+            android:layout_marginTop="@dimen/five"
+                android:layout_marginLeft="@dimen/twelve"
+            android:layout_marginRight="@dimen/twelve"
+            android:src="@drawable/dialog_tracking_no_seperator" />
+
+        
+        <ImageView
+            android:id="@+id/ivComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivSeperator"
+            android:layout_marginTop="@dimen/five"
+                android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:src="@drawable/dialog_tracking_no_complete" />
+        
+        
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/dialog_counter_close_btn" />
+    </RelativeLayout>
+
+</RelativeLayout>

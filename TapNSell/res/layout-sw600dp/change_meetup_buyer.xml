@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/order_status_name"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#334153"
+                android:textSize="@dimen/eightteen" />
+ 
+ <RelativeLayout
+                android:id="@+id/rlImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t_hundred"
+                android:layout_below="@+id/tvName"
+                android:background="@drawable/list_item_image_frame" >
+
+                <ImageView
+                    android:id="@+id/ivProductImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                  />
+                
+            </RelativeLayout>   
+            <LinearLayout
+                android:id="@+id/rlPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/sixtydp"
+                android:background="@drawable/meetup_details_price_icon"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/list_item_price_transparent" />
+
+                <TextView
+                    android:id="@+id/tvPriceType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="2dp"
+                    android:text="$"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/eightteen"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:paddingRight="@dimen/three"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/eightteen"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl51"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirtydp"
+                android:layout_below="@+id/rlImage"
+                android:background="@drawable/change_meetup_select_location_date_time" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/who_you_are_meeting" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl51"
+                android:background="@drawable/change_meetup_bg_top" >
+
+                <ImageView
+                    android:id="@+id/ivUser"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:src="@drawable/meetup_list_user_image" />
+
+                <RelativeLayout
+                    android:id="@+id/rlUserRelative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/ivArrow_chouse_meetup"
+                    android:layout_toRightOf="@+id/ivUser"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five" >
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#334153"
+                        
+                        android:textSize="@dimen/eightteen"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivArrow_chouse_meetup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/five"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl52"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirtydp"
+                android:layout_below="@+id/rlTop"
+                android:background="@drawable/change_meetup_select_location_date_time" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/meetup_location" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl52"
+                android:background="@drawable/change_meetup_bg_top" >
+
+                <ImageView
+                    android:id="@+id/ivLocationIcon"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:src="@drawable/change_meetup_location_logo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivLocationIcon"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five"
+                    android:weightSum="5" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tvLocationName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="#334153"
+                            android:textSize="@dimen/eightteen"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text=" "
+                            android:textColor="#334153"
+                            android:textSize="@dimen/eightteen" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tvDistance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv1"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="#4196ff"
+                            android:textSize="@dimen/fifteen" />
+
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:src="@drawable/order_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirtydp"
+                android:layout_below="@+id/rlMap" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/change_meetup_select_location_date_time" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/meetup_time_date" />
+            </RelativeLayout>
+
+                <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl2"
+                android:layout_marginTop="@dimen/five"
+                android:background="@drawable/change_meetup_date_and_time_unselect_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/five"
+                android:weightSum="5" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.6"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five"
+                    android:weightSum="3" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlDate1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.7"
+                        android:background="@drawable/change_meetup_date_bg"
+                        android:paddingLeft="@dimen/five"
+                        android:paddingRight="@dimen/five" >
+
+                        <ImageView
+                            android:id="@+id/ivd1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/change_meetup_date_icon" />
+
+                        <TextView
+                            android:id="@+id/tvDate1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/ivd1"
+                            android:paddingLeft="@dimen/three"
+                            android:paddingRight="@dimen/three"
+                            android:text=""
+                            android:textSize="29sp"
+                            android:textColor="#6b7889" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                          android:id="@+id/rlTime1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.3"
+                        android:background="@drawable/change_meetup_time_bg"
+                        android:paddingLeft="@dimen/five"
+                        android:paddingRight="@dimen/five" >
+
+                        <ImageView
+                            android:id="@+id/ivt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/change_meetup_time_icon" />
+
+                        <TextView
+                            android:id="@+id/tvTime1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/ivt1"
+                            android:paddingLeft="@dimen/three"
+                            android:paddingRight="@dimen/three"
+                            android:text=""
+                            android:textSize="29sp"
+                            android:textColor="#6b7889" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/change_meetup_unselect_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll3"
+                android:background="@drawable/change_meetup_date_and_time_unselect_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/five"
+                android:weightSum="5" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.6"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five"
+                    android:weightSum="3" >
+
+                    <RelativeLayout
+                         android:id="@+id/rlDate2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.7"
+                        android:background="@drawable/change_meetup_date_bg"
+                        android:paddingLeft="@dimen/five"
+                        android:paddingRight="@dimen/five" >
+
+                        <ImageView
+                            android:id="@+id/ivd2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/change_meetup_date_icon" />
+
+                        <TextView
+                            android:id="@+id/tvDate2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/ivd2"
+                            android:paddingLeft="@dimen/three"
+                            android:paddingRight="@dimen/three"
+                            android:text=""
+                            android:textSize="@dimen/fifteen"
+                            android:textColor="#6b7889" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlTime2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.3"
+                        android:background="@drawable/change_meetup_time_bg"
+                        android:paddingLeft="@dimen/five"
+                        android:paddingRight="@dimen/five" >
+
+                        <ImageView
+                            android:id="@+id/ivt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/change_meetup_time_icon" />
+
+                        <TextView
+                            android:id="@+id/tvTime2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/ivt2"
+                            android:paddingLeft="@dimen/three"
+                            android:paddingRight="@dimen/three"
+                            android:textSize="@dimen/fifteen"
+                            android:text=""
+                            android:textColor="#6b7889" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/change_meetup_unselect_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll4"
+                android:background="@drawable/change_meetup_date_and_time_unselect_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/five"
+                android:weightSum="5" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.6"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five"
+                    android:weightSum="3" >
+
+                    <RelativeLayout
+                         android:id="@+id/rlDate3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.7"
+                        android:background="@drawable/change_meetup_date_bg"
+                        android:paddingLeft="@dimen/five"
+                        android:paddingRight="@dimen/five" >
+
+                        <ImageView
+                            android:id="@+id/ivd3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/change_meetup_date_icon" />
+
+                        <TextView
+                            android:id="@+id/tvDate3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/ivd3"
+                            android:paddingLeft="@dimen/three"
+                            android:paddingRight="@dimen/three"
+                            android:textSize="@dimen/fifteen"
+                            android:text=""
+                            android:textColor="#6b7889" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlTime3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.3"
+                        android:background="@drawable/change_meetup_time_bg"
+                        android:paddingLeft="@dimen/five"
+                        android:paddingRight="@dimen/five" >
+
+                        <ImageView
+                            android:id="@+id/ivt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/change_meetup_time_icon" />
+
+                        <TextView
+                            android:id="@+id/tvTime3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/ivt3"
+                            android:paddingLeft="@dimen/three"
+                            android:paddingRight="@dimen/three"
+                            android:text=""
+                            android:textSize="@dimen/fifteen"
+                            android:textColor="#6b7889" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/change_meetup_unselect_icon" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll5"
+                android:layout_marginTop="@dimen/five"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_weight="1"
+                    android:src="@drawable/change_meetup_confirm_btn" />
+
+                <ImageView
+                    android:id="@+id/ivSuggest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_weight="1"
+                    android:src="@drawable/change_meetup_suggest_other" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

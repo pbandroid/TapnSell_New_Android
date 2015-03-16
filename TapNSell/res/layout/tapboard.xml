@@ -1,0 +1,349 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tb_bg"
+    android:gravity="center_horizontal" >
+
+    <include
+        android:id="@+id/rlheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlheader"
+        android:background="@drawable/cat_search_bg" >
+
+        <EditText
+            android:id="@+id/evsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:background="@drawable/cat_search_btn"
+            android:drawableLeft="@drawable/cat_ev_search_icon"
+            android:drawablePadding="@dimen/five"
+            android:drawableRight="@drawable/cat_go_btn"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:hint="Search"
+            android:imeOptions="actionDone"
+            android:paddingLeft="@dimen/ten"
+            android:paddingRight="@dimen/three"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#30ffffff"
+            android:textSize="@dimen/eightteen" />
+
+        <ImageView
+            android:id="@+id/ivGobtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/cat_go_btn_transperent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottam"
+        android:layout_below="@+id/rlSearch"
+        android:paddingBottom="@dimen/three"
+        android:paddingLeft="@dimen/three"
+        android:paddingTop="@dimen/three" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/three"
+            android:scaleType="fitXY"
+            android:src="@drawable/tapboard_center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="5" >
+
+                <ImageView
+                    android:id="@+id/ivWatchList"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/ivTapInspire"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/ivNewListing"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/ivMyOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/ivShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="5" >
+
+                <ImageView
+                    android:id="@+id/ivToDos"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:id="@+id/rlMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tvMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/tap_board_text_bg"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivEarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/ivMyListing"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/ivSell"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- <RelativeLayout
+        android:id="@+id/rlBottam"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftydp"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tap_board_tap_bar"
+            android:scaleType="fitEnd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <RelativeLayout
+                android:id="@+id/rlMyAccount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/tab_icon1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                   android:id="@+id/rlSetting"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/tab_icon2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCases"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/tab_icon3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlHelp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/tab_icon4" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+ -->
+ 
+ 
+    <RelativeLayout
+         android:id="@+id/rlBottam"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+           
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fiftydp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/tap_board_tap_bar"
+                android:scaleType="fitEnd" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4" >
+
+                <RelativeLayout
+                    android:id="@+id/rlMyAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/fiftydp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/tab_icon1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSetting"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/fiftydp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/tab_icon2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlCases"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1" >
+
+				<TextView
+				    android:id="@+id/tvCaseNo"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentRight="true"
+				    android:layout_alignParentTop="true"
+				    android:background="@drawable/tap_board_opencase_text"
+				    android:gravity="center"
+				    android:text=""
+				    android:textColor="@android:color/white" />
+
+                    <RelativeLayout
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fiftydp"
+                        android:layout_alignParentBottom="true" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/tab_icon3" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlHelp"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/fiftydp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/tab_icon4" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+ 
+    <TextView
+        android:id="@+id/tvTodos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rlSearch"
+        android:background="@drawable/tap_board_text_bg"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:customFont="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <include
+        android:id="@+id/rlheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlheader"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <RelativeLayout
+            android:id="@+id/rlHelp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Help"
+                android:textColor="#4d5e75"
+                android:textSize="@dimen/twenty" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlContact"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+         >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Contact Us"
+                android:textColor="#4d5e75"
+                android:textSize="@dimen/twenty" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSingleFAQ"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Single FAQ"
+                android:textColor="#4d5e75"
+                android:textSize="@dimen/twenty" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSingleFAQSection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+        >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Single FAQ Section"
+                android:textColor="#4d5e75"
+                android:textSize="@dimen/twenty" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

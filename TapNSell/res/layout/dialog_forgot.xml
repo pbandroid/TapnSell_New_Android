@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/forgot_dialog" >
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/ten"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Please check your mail for new password"
+            android:textColor="#808c9d"
+            android:textSize="@dimen/eightteen" />
+
+        <ImageView
+            android:id="@+id/ivCont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/five"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:layout_marginTop="@dimen/five"
+            android:src="@drawable/forgot_cnt" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:customFont="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirtydp"
+        android:paddingLeft="@dimen/five"
+        android:paddingRight="@dimen/five" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/make_offer_bg" />
+
+        <LinearLayout
+            android:id="@+id/llMakeOffer"
+            android:layout_width="@dimen/onetwentydp"
+            android:layout_height="@dimen/oneeighty"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/five"
+            android:paddingLeft="@dimen/five"
+            android:weightSum="3.7" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:src="@drawable/make_offer_image_top" />
+
+            <com.convertingoffers.tapnsell.util.CustomTextView
+                android:id="@+id/tvItemName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/make_offer_top_name"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:singleLine="true"
+                android:text=" test"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen"
+                android:textStyle="bold"
+                customFont:fontFamily="TIMES_1.TTF" />
+           
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+
+                <ImageView
+                    android:id="@+id/ivItemImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/make_offer_item_bg" />
+
+             
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlViewOffer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/offer_view_all_offer" >
+
+                <ImageView
+                    android:id="@+id/ivViewOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/offer_view_all_offer_text" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/three"
+            android:src="@drawable/make_offer_close_transparent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/llMakeOffer"
+            android:background="@drawable/make_offer_image_right"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:src="@drawable/make_offer_image_top" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv4"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/three"
+                android:paddingRight="@dimen/five"
+                android:paddingTop="@dimen/five"
+                android:weightSum="2" >
+
+                <TextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/five"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/eightteen" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/three"
+                        android:paddingTop="@dimen/three" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/five"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text=" You  "
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/eightteen" />
+
+                        <EditText
+                            android:id="@+id/evAmmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/five"
+                            android:background="@drawable/make_offer_ev"
+                            android:clickable="false"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:paddingLeft="@dimen/three"
+                            android:paddingRight="@dimen/three"
+                            android:singleLine="true"
+                            android:textColorHint="#70000000"
+                            android:textSize="@dimen/fifteen" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:background="@drawable/make_offer_accep_declin_counter"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <ImageView
+                        android:id="@+id/ivDecline"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/ivCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/ivAccept"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

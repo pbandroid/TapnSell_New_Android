@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/credit_info_address_bg_child"
+        android:paddingLeft="@dimen/five"
+        android:paddingRight="@dimen/five" >
+
+        <ImageView
+            android:id="@+id/ivSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add_creditcard_address_default_icon" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/ten"
+            android:layout_toRightOf="@+id/ivSelect"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="tsettsett setts ettset tsettsetts et tsettset tsetts ettse ttsettset"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/twenty" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

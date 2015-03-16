@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:customFont="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/login_dialog_bg" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirtydp"
+        android:paddingLeft="@dimen/five"
+        android:paddingRight="@dimen/five" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/make_offer_bg" />
+
+        <LinearLayout
+            android:id="@+id/llMakeOffer"
+            android:layout_width="@dimen/onetwentydp"
+            android:layout_height="@dimen/oneseventy"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/five"
+            android:paddingLeft="@dimen/five"
+            android:weightSum="4.5" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/make_offer_image_top" />
+
+             <RelativeLayout
+                android:layout_width="115dp"
+                android:layout_height="0dp"
+                android:layout_weight="3" >
+            <ImageView
+                android:id="@+id/ivItemImage"
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                     android:background="@drawable/counter_image_bg"
+                android:padding="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/make_offer_item_bg" />
+
+</RelativeLayout>
+            <com.convertingoffers.tapnsell.util.CustomTextView
+                android:id="@+id/tvItemName"
+                android:layout_width="115dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/make_offer_item_name_bg"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:singleLine="true"
+                android:text=" "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen"
+                android:textStyle="bold"
+                customFont:fontFamily="TIMES_1.TTF" />
+            
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/three"
+            android:src="@drawable/make_offer_close_transparent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/llMakeOffer"
+            android:background="@drawable/make_offer_image_right"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:src="@drawable/make_offer_image_top" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv4"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/three"
+                android:paddingRight="@dimen/five"
+                android:weightSum="2" >
+
+                <com.convertingoffers.tapnsell.util.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:text="Sorry !"
+                    android:textColor="#26292f"
+                    android:textSize="@dimen/twentyfive"
+                    android:textStyle="bold"
+                    customFont:fontFamily="TIMES_1.TTF" />
+                
+
+                 <com.convertingoffers.tapnsell.util.CustomTextView
+                     android:id="@+id/tvDeclineText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:paddingTop="@dimen/three"
+                    android:maxLines="2"
+                    android:text="Your offer for $120 \n was decline."
+                    android:textColor="#26292f"
+                    android:textSize="@dimen/twenty"
+                    customFont:fontFamily="TIMES_1.TTF" />
+                
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@drawable/make_offer_decline_btn"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <ImageView
+                        android:id="@+id/ivNewOffer"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/ivBuy"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

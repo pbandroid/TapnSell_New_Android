@@ -1,0 +1,388 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/product_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+           android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+        android:layout_height="wrap_content" >
+
+        <com.convertingoffers.tapnsell.util.CustomTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/list_item_header_bg"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/fifteen"
+            android:shadowColor="#50000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+               android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rlCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+               android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_margin="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivDefault"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twotwenty"
+                android:background="@drawable/list_item_image_frame"
+                   android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                android:scaleType="centerCrop" />
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rlPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/sixtydp"
+            android:background="@drawable/iv_price_tag"
+               android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                   android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                android:src="@drawable/list_item_price_transparent" />
+
+            <TextView
+                android:id="@+id/tvPriceType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="right|center_vertical"
+                   
+                android:paddingRight="2dp"
+                android:text="$"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/eightteen"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:maxLength="3"
+                android:paddingRight="@dimen/three"
+                
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/eightteen"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llReasonForCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlParent"
+        android:layout_marginLeft="@dimen/five"
+           android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+        android:layout_marginRight="@dimen/five"
+        android:layout_marginTop="@dimen/five"
+        android:background="@drawable/opencase_reason_for_case"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Reason for case: "
+            android:textColor="#252933"
+               android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="@dimen/twenty" />
+
+        <TextView
+            android:id="@+id/tvReasonForCase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:singleLine="true"
+               android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="   "
+            android:textColor="#252933"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCaseno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llReasonForCase"
+        android:layout_marginLeft="@dimen/five"
+           android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+        android:layout_marginRight="@dimen/five"
+        android:background="@drawable/opencase_reason_for_case"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Case Number: "
+               android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColor="#252933"
+            android:textSize="@dimen/twenty" />
+
+        <TextView
+            android:id="@+id/tvCaseNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:singleLine="true"
+               android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text=""
+            android:textColor="#252933"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCaseRespondTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llCaseno"
+        android:layout_marginLeft="@dimen/five"
+           android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+        android:layout_marginRight="@dimen/five"
+        android:background="@drawable/opencase_must_respond"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.95"
+            android:text="Must Respond to:"
+               android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColor="#252933"
+            android:textSize="@dimen/twenty" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+               android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_weight="1.05" >
+
+            <LinearLayout
+                android:id="@+id/llleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                   android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:background="@drawable/open_case_days"
+                    android:gravity="center"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                       android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/twelve" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:text="Hours"
+                       android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                    android:textColor="#2c3b4e"
+                    android:textSize="@dimen/ten" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/llleft"
+                   android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvMinutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:background="@drawable/open_case_days"
+                    android:gravity="center"
+                       android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/twelve" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/five"
+                       android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                    android:layout_marginRight="@dimen/five"
+                    android:text="Minutes"
+                    android:textColor="#2c3b4e"
+                    android:textSize="@dimen/ten" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/llCenter"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvSeconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                       android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                    android:background="@drawable/open_case_days"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/twelve" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:text="Seconds"
+                       android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                    android:textColor="#2c3b4e"
+                    android:textSize="@dimen/ten" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+          android:id="@+id/rlChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llCaseRespondTime" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:layout_marginTop="@dimen/ten"
+            android:src="@drawable/open_case_chat_now" />
+
+        <TextView
+            android:id="@+id/tvChatCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/open_case_notification_bg"
+            android:gravity="center"
+            android:maxLength="3"
+             android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="123"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen" />
+    </RelativeLayout>
+
+</RelativeLayout>

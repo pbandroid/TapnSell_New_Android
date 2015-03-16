@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+   <attr name="autoScaleTextViewStyle" format="reference" />
+    <declare-styleable name="AutoScaleTextView">
+        <attr name="minTextSize" format="dimension" />
+    </declare-styleable>
+    
+    <declare-styleable name="customFont">
+        <attr name="fontFamily" format="string" />
+    </declare-styleable>
+    
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer" />
+    </declare-styleable>
+</resources>

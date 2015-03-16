@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <ImageView
+        android:id="@+id/ivMenuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/twenty"
+        android:padding="@dimen/twenty"
+        android:layout_marginTop="@dimen/fifteen"
+        android:src="@drawable/menu_btn" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBtn"
+        android:layout_below="@+id/ivMenuBtn"
+         >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/fifteen"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="Selling Made Easy"
+            android:textColor="#333333"
+            android:textSize="@dimen/twentyfive" />
+
+    </RelativeLayout>
+ </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fifteen"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/five"
+        android:weightSum="1" >
+
+        
+        
+        <ImageView  
+            android:id="@+id/ivShop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_weight="0.5"
+            android:background="@drawable/home_shop" />
+      <!--   <RelativeLayout
+            android:id="@+id/rlShop"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:clickable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Shop"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/eightteen" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/ten"
+                android:clickable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/shop_icon" />
+        </RelativeLayout>
+ -->
+ 
+ 
+ <ImageView
+            android:id="@+id/ivSellIt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_weight="0.5"
+            android:background="@drawable/home_sell_it" />
+        <!-- <RelativeLayout
+            android:id="@+id/rlSellIt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_weight="0.5"
+            android:background="@drawable/sell_btn" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:clickable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Sell it"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/twenty" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/ten"
+                android:clickable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/sell_icon" />
+        </RelativeLayout> -->
+    </LinearLayout>
+
+</RelativeLayout>

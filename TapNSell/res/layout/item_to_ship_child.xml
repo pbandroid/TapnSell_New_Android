@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/order_status_name"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/five"
+        android:paddingRight="@dimen/five"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#334153"
+        android:textSize="@dimen/eightteen" />
+
+    <RelativeLayout
+        android:id="@+id/rlImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oneeighty"
+       
+        android:layout_below="@+id/tvName" >
+
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+          />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/five"
+            android:src="@drawable/item_ship_sold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivShip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          android:layout_below="@+id/rlImage" 
+        android:src="@drawable/item_ship_shipto" />
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivShip"
+        android:padding="@dimen/five" >
+
+        <EditText
+            android:id="@+id/evAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/item_ship_ev_address"
+            android:gravity="top"
+            android:text=""
+            android:editable="false"
+            android:textSize="@dimen/eightteen"
+            android:padding="@dimen/five"
+            android:textColor="#aeaeae" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llBtnbg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl1"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginRight="@dimen/five"
+        android:background="@drawable/item_ship_chat_ship1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <ImageView
+            android:id="@+id/ivChat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ivShipped"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

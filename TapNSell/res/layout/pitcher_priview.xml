@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.convertingoffers.tapnsell.util.TouchImageView
+        android:id="@+id/imgprivew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="@dimen/sixtydp"
+         />
+
+    <RelativeLayout
+        android:id="@+id/btnButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/capture_bg" >
+
+        <Button
+            android:id="@+id/btnRetake"
+              android:layout_width="@dimen/eightydp"
+            android:layout_height="@dimen/fourtydp"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginTop="@dimen/fiftydp"
+            android:background="@drawable/takepitcer_retakebtn"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fifteen" />
+
+        <Button
+            android:id="@+id/btnpreviw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/takepitcer_previeimg"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fifteen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Preview"
+              android:textColor="@android:color/white"
+             android:textSize="@dimen/fifteen"  />
+
+        <Button
+            android:id="@+id/btnUse"
+            android:layout_width="@dimen/eightydp"
+            android:layout_height="@dimen/fourtydp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/fiftydp"
+            android:background="@drawable/takepitcher_green_btn"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/use"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fifteen" />
+    </RelativeLayout>
+
+</RelativeLayout>

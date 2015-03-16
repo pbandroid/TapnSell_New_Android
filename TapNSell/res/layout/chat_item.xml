@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivUserImage"
+                android:layout_width="@dimen/fourtydp"
+                android:layout_height="@dimen/fourtydp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/chat_item_light_blue_bg_user" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ivUserImage"
+                android:background="@drawable/chat_item_name_bg"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:text="admin"
+                android:textColor="#646464"
+                android:textSize="@dimen/twelve" />
+        </RelativeLayout>
+<RelativeLayout
+        android:id="@+id/rlChatMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <RelativeLayout
+            android:id="@+id/rlChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/ten" >
+
+            <ImageView
+                android:id="@+id/ivTrans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/chat_item_text_transperant1" />
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ivTrans"
+                android:background="@drawable/chat_item_text1"
+                android:gravity="left|center_vertical"
+                android:text="asdsad   asdsad   asdsad dasdsad  asdsad   asdsad dasdsad  asdsad   asdsad dasdsad  asdsad dasdsad  "
+                android:textColor="#ffffff"
+                android:textSize="@dimen/eightteen" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/ten"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/ivTrans1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/chat_item_text_transperant1" />
+
+            <RelativeLayout
+                android:id="@+id/rlImage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ivTrans1"
+                android:background="@drawable/chat_item_text1"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <ImageView
+                    android:id="@+id/ivComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/oneefiftydp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                   />
+              
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rlChatMain"
+        android:background="@drawable/chat_item_name_bg"
+        android:gravity="center"
+        android:paddingLeft="@dimen/ten"
+        android:singleLine="true"
+       
+        android:text="09:0t5 Am"
+        android:textColor="#7c91a2"
+        android:textSize="@dimen/twelve" />
+
+</RelativeLayout>

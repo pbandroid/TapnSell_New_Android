@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="360dp"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="360dp"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:layout_marginTop="@dimen/five"
+            android:background="@drawable/dialog_counter_bg" />
+
+        <LinearLayout
+            android:id="@+id/llUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivClose"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/ten"
+            android:orientation="vertical"
+            android:padding="@dimen/five" >
+        </LinearLayout>
+
+        <com.convertingoffers.tapnsell.util.CustomTextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivClose"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:shadowColor="#11000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:text="Enter Your Home Address"
+            android:textColor="#646e7b"
+            android:textSize="@dimen/twenty"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/evAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_below="@+id/tvHeader"
+            android:background="@drawable/dialog_tracking_no_ev"
+            android:hint="Enter Your Address"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five"
+            android:textColor="#aeaeae"
+            android:textSize="@dimen/eightteen" />
+        <EditText
+            android:id="@+id/evCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:layout_below="@+id/evAddress"
+            android:layout_marginTop="@dimen/five"
+            android:background="@drawable/dialog_tracking_no_ev"
+            android:hint="Enter Your City"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five"
+            android:textColor="#aeaeae"
+            android:textSize="@dimen/eightteen" />
+        <EditText
+            android:id="@+id/evState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_below="@+id/evCity"
+            android:layout_marginRight="@dimen/fifteen"
+            android:layout_marginTop="@dimen/five"
+            android:background="@drawable/dialog_tracking_no_ev"
+            android:hint="Enter Your State"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five"
+            android:textColor="#aeaeae"
+            android:textSize="@dimen/eightteen" />
+        <EditText
+            android:id="@+id/evZipCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:layout_below="@+id/evState"
+            android:layout_marginTop="@dimen/five"
+            android:background="@drawable/dialog_tracking_no_ev"
+            android:hint="Enter Your ZipCode"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five"
+            android:textColor="#aeaeae"
+            android:textSize="@dimen/eightteen" />
+
+        <ImageView
+            android:id="@+id/ivSeperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/evZipCode"
+            android:layout_marginTop="@dimen/five"
+                android:layout_marginLeft="@dimen/twelve"
+            android:layout_marginRight="@dimen/twelve"
+            android:src="@drawable/dialog_tracking_no_seperator" />
+
+        
+        <ImageView
+            android:id="@+id/ivComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivSeperator"
+            android:layout_marginTop="@dimen/five"
+                android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginRight="@dimen/fifteen"
+            android:src="@drawable/dialog_tracking_no_complete" />
+        
+        
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/dialog_counter_close_btn" />
+    </RelativeLayout>
+
+</RelativeLayout>

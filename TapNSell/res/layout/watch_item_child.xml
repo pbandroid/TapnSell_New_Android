@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/product_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rlWatchList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_header_bg" >
+
+        <com.convertingoffers.tapnsell.util.CustomTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/fifteen"
+            android:shadowColor="#50000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/five"
+            android:background="@drawable/watch_bg_yes" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/watch_bg_right" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlWatchList"
+        android:layout_margin="@dimen/five" >
+
+        <ImageView
+            android:id="@+id/ivDefault"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t_hundred"
+            android:background="@drawable/list_item_image_frame"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlCenter"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <Button
+            android:id="@+id/btnFav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_weight="1"
+            android:background="@drawable/list_item_fav_bg"
+            android:drawableTop="@drawable/fav_unlike"
+            android:maxLength="4"
+            android:paddingTop="@dimen/five"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#989898"
+            android:textSize="@dimen/eightteen" />
+
+        <ImageView
+            android:id="@+id/ivChat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_weight="1"
+            android:focusableInTouchMode="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/item_listing_chat_ic" />
+
+        <ImageView
+            android:id="@+id/ivMakeOffer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_weight="1.5"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/list_item_make_offer" />
+
+        <RelativeLayout
+            android:id="@+id/rlBuy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:layout_weight="1.5"
+            android:background="@drawable/list_item_buy_bg"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/list_item_buy_text" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rlPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/sixtydp"
+        android:background="@drawable/iv_price_tag"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_item_price_transparent" />
+
+        <TextView
+            android:id="@+id/tvPriceType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="right|center_vertical"
+            android:paddingRight="2dp"
+            android:text="$"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:maxLength="3"
+            android:paddingRight="@dimen/three"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rlPrice"
+        android:layout_marginRight="@dimen/five"
+        android:layout_marginTop="@dimen/five"
+        android:background="@drawable/list_item_distance_bg"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" >
+
+        <ImageView
+            android:id="@+id/ivDistanceIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:src="@drawable/list_item_distance_icon" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/three"
+            android:layout_toRightOf="@+id/ivDistanceIcon"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:maxLength="5"
+            android:paddingRight="@dimen/five"
+            android:paddingTop="@dimen/five"
+            android:singleLine="true"
+            android:text="12345"
+            android:textColor="#000000"
+            android:textSize="@dimen/ten"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

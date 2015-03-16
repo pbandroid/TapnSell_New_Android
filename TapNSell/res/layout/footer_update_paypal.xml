@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <ImageView
+        android:id="@+id/ivPayPalIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/thirtydp"
+        android:src="@drawable/paypal_icon" />
+
+    <EditText
+        android:id="@+id/ev1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPayPalIcon"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/fifteen"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_marginTop="@dimen/thirtydp"
+        android:background="@drawable/ev_bg"
+        android:hint="PayPal E-mail"
+        android:text=""
+        android:inputType="textEmailAddress"
+        android:paddingLeft="@dimen/ten"
+        android:textSize="@dimen/eightteen" />
+
+    <EditText
+        android:id="@+id/ev2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ev1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/fifteen"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/ev_bg"
+        android:hint="Password"
+        android:inputType="textPassword"
+            android:text=""
+        android:paddingLeft="@dimen/ten"
+        android:textSize="@dimen/eightteen" />
+     <EditText
+        android:id="@+id/ev3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ev2"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/fifteen"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/ev_bg"
+        android:hint="Password"
+        android:inputType="textPassword"
+            android:text=""
+        android:paddingLeft="@dimen/ten"
+        android:textSize="@dimen/eightteen" />
+
+    <RelativeLayout
+        android:id="@+id/rlUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlCancel"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/header_bg" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ten"
+            android:src="@drawable/update_image" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/twenty"
+            android:src="@drawable/forgot_next_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/update_paypal_cancel" >
+
+       <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ten"
+            android:src="@drawable/paypal_cancel_iv" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/twenty"
+            android:src="@drawable/update_paypal_cancel_icon" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/message_bg"
+    android:padding="@dimen/five"
+    android:id="@+id/rlMain"
+     >
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="@dimen/fiftydp"
+        android:layout_height="@dimen/fiftydp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/five"
+        android:src="@drawable/message_user_icon" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ivUser" >
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginTop="@dimen/ten"
+            android:text="Husam Alrubaye"
+            android:textColor="#313b45"
+            android:textSize="35sp" />
+        
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_below="@+id/tvName"
+            android:layout_marginTop="@dimen/two"
+            android:maxLines="2"
+            android:text="Hi Carlos Check out this prodect Hi Carlos Check out this prodect "
+            android:textColor="#50313b45"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

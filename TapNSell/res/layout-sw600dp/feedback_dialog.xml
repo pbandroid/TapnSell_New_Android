@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:padding="@dimen/ten" >
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/feedback_dialog_top" >
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/feedback_need" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/thirtyfivedp"
+            android:layout_toRightOf="@+id/iv1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTop"
+        android:background="@drawable/leave_feedback_bg"
+        android:paddingRight="11dp" >
+
+        <RelativeLayout
+            android:id="@+id/rlUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingBottom="@dimen/five"
+            android:paddingLeft="@dimen/five"
+            android:layout_marginRight="11dp"
+            android:paddingTop="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivUserIcon"
+                android:layout_width="@dimen/sixtyFivedp"
+                android:layout_height="@dimen/sixtyFivedp"
+                android:src="@drawable/feedback_user_default" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/five"
+                android:layout_toRightOf="@+id/ivUserIcon"
+                android:paddingLeft="@dimen/five"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#313b45"
+                android:textSize="@dimen/twentyfive" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/llRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlUser"
+            android:orientation="horizontal"
+            android:padding="@dimen/ten" >
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="Rate"
+                android:textColor="#5c6972"
+                android:textSize="@dimen/eightteen" />
+
+               <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tv1" >
+
+                 <RatingBar
+                    android:id="@+id/rb_User_review_Item"
+                    style="@style/CustomRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:numStars="5"
+                    android:stepSize="0.5" />
+            </RelativeLayout>
+           
+            
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/evFeedback_share_exp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llRate"
+            android:background="@drawable/feedback_share_exp"
+            android:gravity="top"
+             android:layout_marginRight="11dp"
+            android:hint="Share your experience"
+                 android:textStyle="italic"
+            android:textSize="30sp"
+            android:padding="@dimen/five"
+            android:textColor="#737373" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/evFeedback_share_exp"
+            android:layout_marginTop="@dimen/five"
+            android:gravity="center"
+            android:text="Your review will be publicly visible and will help  members of the TapNSell community!"
+            android:textColor="#5c6972"
+            android:textSize="@dimen/fifteen" />
+
+        <ImageView
+            android:id="@+id/ivRateNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_marginTop="@dimen/ten"
+            android:padding="@dimen/five"
+            android:src="@drawable/feedback_rate_btn" />
+    </RelativeLayout>
+
+</RelativeLayout>

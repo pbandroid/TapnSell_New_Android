@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_review_item_arrow"
+        android:paddingTop="@dimen/five" >
+
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivUserImage"
+                android:layout_width="@dimen/fourtyfivedp"
+                android:layout_height="@dimen/fourtyfivedp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/chat_item_light_blue_bg_user" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_toLeftOf="@+id/tvDate"
+                android:layout_toRightOf="@+id/ivUserImage"
+                android:paddingTop="@dimen/five"
+                android:singleLine="true"
+                android:text="UserName"
+                android:textColor="#334153"
+                android:textSize="@dimen/eightteen" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserName"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_toRightOf="@+id/ivUserImage"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/five" >
+
+                <RatingBar
+                    android:id="@+id/rb_User_review_Item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:rating="1.9"
+                    android:progressDrawable="@drawable/custom_ratingbar"
+                   
+                     />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/five"
+                android:paddingRight="@dimen/two"
+                android:paddingTop="@dimen/five"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#334153"
+                android:textSize="@dimen/fifteen" />
+        </RelativeLayout>
+
+        <com.convertingoffers.tapnsell.util.ExpandableTextView
+            android:id="@+id/ETReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTop"
+            android:layout_marginTop="@dimen/five"
+            android:drawableBottom="@drawable/user_review_expand_text"
+            android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five"
+            android:paddingTop="@dimen/five"
+            android:text="sadghkj ajshdkj asdaksdjj asdsadasdsda jashdkjhas asjhdkjas jshadkjhaskjd  ajshkj asjkdhkj asdjklkj "
+            android:textColor="#728093"
+            android:textSize="@dimen/fifteen" />
+    </RelativeLayout>
+
+</RelativeLayout>

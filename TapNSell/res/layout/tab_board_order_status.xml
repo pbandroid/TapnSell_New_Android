@@ -1,0 +1,278 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:paddingBottom="@dimen/five" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/order_status_name"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#334153"
+                android:textSize="@dimen/eightteen" />
+
+            <RelativeLayout
+                android:id="@+id/rlImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/oneseventy"
+                android:layout_below="@+id/tvName"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/list_item_image_frame" >
+
+                <ImageView
+                    android:id="@+id/ivProductImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+                
+              
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rlPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvName"
+                android:layout_marginTop="@dimen/five"
+                android:background="@drawable/iv_price_tag"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/list_item_price_transparent" />
+
+                <TextView
+                    android:id="@+id/tvPriceType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="2dp"
+                    android:text="$"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/eightteen"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:paddingRight="@dimen/three"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/eightteen"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llShippingService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlImage"
+                android:background="@drawable/order_status_product_status"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Shipping Service:"
+                    android:textColor="#252933"
+                    android:textSize="@dimen/fifteen" />
+
+                <TextView
+                    android:id="@+id/tvShippingService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#252933"
+                    android:textSize="@dimen/fifteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDelivaryEstimate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llShippingService"
+                android:background="@drawable/order_status_product_status"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Delivery Estimate:"
+                    android:textColor="#252933"
+                    android:textSize="@dimen/fifteen" />
+
+                <TextView
+                    android:id="@+id/tvDeliverEstimate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text=" "
+                    android:textColor="#252933"
+                    android:textSize="@dimen/fifteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDeliveredDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llDelivaryEstimate"
+                android:background="@drawable/order_status_product_status"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Delivered Date:"
+                    android:textColor="#252933"
+                    android:textSize="@dimen/fifteen" />
+
+                <TextView
+                    android:id="@+id/tvDeliverEstimateTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text=" "
+                    android:textColor="#252933"
+                    android:textSize="@dimen/fifteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llDeliveredDate"
+                android:background="@drawable/order_status_product_status"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/order_status_processing_stripe" />
+
+                <ImageView
+                    android:id="@+id/ivStautsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/five"
+                    android:src="@drawable/order_status_status_text1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll2"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/five"
+                android:background="@drawable/order_status_bottam_button"
+                android:orientation="vertical"
+                android:weightSum="2" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <ImageView
+                        android:id="@+id/ivRefund"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/ivFileCase"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <ImageView
+                        android:id="@+id/ivContactSeller"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/ivTrackingNo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

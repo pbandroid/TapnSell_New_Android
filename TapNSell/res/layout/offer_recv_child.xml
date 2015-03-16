@@ -1,0 +1,218 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/product_bg" >
+
+    <com.convertingoffers.tapnsell.util.CustomTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/list_item_header_bg"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/fifteen"
+        android:shadowColor="#50000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/eightteen"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rlCenter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/t_hundred"
+        android:layout_below="@+id/tvName"
+        android:layout_margin="@dimen/five" >
+
+        <ImageView
+            android:id="@+id/ivDefault"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t_hundred"
+            android:background="@drawable/list_item_image_frame"
+            android:scaleType="centerCrop" />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/offerrecive_timer_bg"
+            android:orientation="horizontal"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Expires:"
+                android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                android:padding="@dimen/five"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/five"
+                android:text=""
+                android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlCenter"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/five"
+        android:paddingBottom="@dimen/five"
+        android:paddingRight="@dimen/five"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/ivAllOffer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/offer_recv_all_offer" />
+
+        <ImageView
+            android:id="@+id/ivCounter"
+            android:layout_width="0dp"
+              android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="@dimen/five"
+            android:src="@drawable/offer_recv_counter" />
+
+        <ImageView
+            android:id="@+id/ivAcceptOffer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+               android:scaleType="fitXY"
+            android:layout_marginLeft="@dimen/five"
+            android:src="@drawable/offer_recv_accept" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/sixtydp"
+        android:background="@drawable/iv_price_tag"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_item_price_transparent" />
+
+        <TextView
+            android:id="@+id/tvPriceType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="right|center_vertical"
+            android:paddingRight="2dp"
+         android:layout_marginLeft="@dimen/three"
+            android:text=" $"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:paddingRight="@dimen/five"
+            android:singleLine="true"
+            android:text="12345"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+    </LinearLayout>
+ <LinearLayout
+        android:id="@+id/llOfferPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/five"
+        android:layout_below="@+id/llPrice"
+        android:background="@drawable/offer_recv_yello_price_bg"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_item_price_transparent" />
+
+        <TextView
+            android:id="@+id/tvOfferPriceType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="right|center_vertical"
+            android:paddingRight="2dp"
+         android:layout_marginLeft="@dimen/three"
+            android:text=" $"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOfferPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:paddingRight="@dimen/five"
+            android:singleLine="true"
+            android:text="12345"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+    </LinearLayout>
+    
+</RelativeLayout>

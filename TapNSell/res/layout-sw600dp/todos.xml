@@ -1,0 +1,741 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottamShopSell"
+        android:layout_below="@+id/include1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="7" >
+
+            <RelativeLayout
+                android:id="@+id/rlAddPaypalAccount"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvAddPayPal"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="~"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/twentyfive"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/add_paypal_account" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMyAccount"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvMyAccount"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/todo_myaccount" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTOShip"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvShip"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/todo_ship" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMeetUps"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvMeetUp"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/todo_meetup" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNewOffer"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvNewOffer"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll65"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/todo_newoffer" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlInBox"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvInbox"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/todo_inbox" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCases"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvCases"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/todo_cases" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNeedFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvNeedFeedBack"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/todo_needfeedback" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPromotionListing"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvPromotListing"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/todo_promot_listing" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltapinspire"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvTapInsp"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/todo_tapinspire" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNewListing"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_list_child_bg"
+                android:paddingBottom="@dimen/five"
+                android:paddingTop="@dimen/five" >
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/todo_left_bg"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/todo_blanck" />
+
+                    <com.convertingoffers.tapnsell.util.AutoResizeTextView
+                        android:id="@+id/tvNewListing"
+                        android:layout_width="80sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/todo_tv"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="~"
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivBlank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/todo_blanck1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/ivBlank"
+                    android:src="@drawable/new_listing" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:src="@drawable/order_arrow" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBottamShopSell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/five"
+        android:paddingBottom="@dimen/five"
+        android:weightSum="1" >
+
+        
+
+        <ImageView
+            android:id="@+id/ivShop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5" 
+            android:paddingRight="@dimen/five"
+            
+            android:src="@drawable/todo_shop" />
+        
+        <ImageView
+            android:id="@+id/ivSell"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:paddingLeft="@dimen/five"
+            android:src="@drawable/todo_sell_it" />
+    </LinearLayout>
+
+</RelativeLayout>

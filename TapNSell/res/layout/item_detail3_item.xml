@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/tvCat1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/ten"
+            android:paddingTop="@dimen/ten"
+            android:singleLine="true"
+            android:text="testtest"
+            android:textColor="#5d6b7d"
+            android:textSize="@dimen/fifteen" />
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:src="#60000000" />
+
+        <!--
+             <TextView
+            android:id="@+id/tvCat2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/btn_selector"
+            android:paddingBottom="@dimen/five"
+            android:paddingTop="@dimen/five"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#5d6b7d"
+            android:textSize="@dimen/fifteen" />
+        -->
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll1"
+        android:background="#60000000" />
+
+</RelativeLayout>

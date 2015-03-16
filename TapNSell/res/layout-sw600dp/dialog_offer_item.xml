@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/dialog_counter_bg" />
+
+        <LinearLayout
+            android:id="@+id/llUser"
+            android:layout_width="@dimen/ninetydp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivClose"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/ten"
+            android:orientation="vertical"
+            android:padding="@dimen/five" >
+
+         
+
+             <RelativeLayout
+                android:layout_width="@dimen/sixtydp"
+                 android:layout_gravity="center"
+                android:layout_height="@dimen/sixtydp" >
+
+                <ImageView
+                    android:id="@+id/ivUserImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/offer_item_user_bg" />
+                
+            </RelativeLayout>
+            
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/three"
+                android:paddingRight="@dimen/three"
+                android:singleLine="true"
+                 android:layout_gravity="center"
+                android:text=" fsdj sdjf sdfj l"
+                android:textColor="#57a0fc"
+                android:textSize="@dimen/fifteen" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivClose"
+            android:layout_marginTop="14dp"
+            android:layout_toLeftOf="@+id/ivClose"
+            android:layout_toRightOf="@+id/llUser"
+            android:paddingLeft="@dimen/fifteen" >
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:text="Respond to offer"
+                android:textColor="#646e7b"
+                android:textSize="@dimen/eightteen"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv1"
+                android:layout_marginTop="@dimen/ten"
+                android:gravity="center"
+                android:paddingLeft="@dimen/three"
+                android:paddingRight="@dimen/five"
+                android:singleLine="true"
+                android:text="126"
+                android:textColor="#1fbf7a"
+                android:textSize="@dimen/twentyfive"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/dialog_counter_close_btn" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="@dimen/ten"
+           android:layout_marginRight="@dimen/ten"
+            android:layout_below="@+id/llUser" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/dialog_counter_btn_bottam" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:weightSum="3" >
+
+                <ImageView
+                    android:id="@+id/ivDecline"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/fourtydp"
+                    android:layout_weight="1" />
+                
+            <ImageView
+                    android:id="@+id/ivCounter"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/fourtydp"
+                    android:layout_weight="1" />
+              <ImageView
+                    android:id="@+id/ivAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/fourtydp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.convertingoffers.tapnsell"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" 
+        android:targetSdkVersion="21" />
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.convertingoffers.tapnsell.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- Google map permition -->
+    <permission android:name="com.convertingoffers.tapnsell.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.convertingoffers.tapnsell.permission.MAPS_RECEIVE" /> 
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!-- Google map permition -->
+    <permission  android:name="com.convertingoffers.tapnsell.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+          android:name="TapnSellApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+           android:theme="@android:style/Theme.NoTitleBar"
+        android:requiredForAllUsers="false">
+        <activity android:name="SplashActivity" android:theme="@style/Theme.Splash" android:label="@string/app_name" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"><intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter></activity>
+<!--   -->
+            <activity android:name="eu.janmuller.android.simplecropimage.CropImage" />
+        <activity android:name="ForgotPasswordActivity" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait"/>
+        <activity android:name="SignInHomeActivity" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait"/>
+        <activity android:name="SignInActivity" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name="RegisterActivity" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait"/>
+      	<activity android:name=".util.Login_Dialog_Activity" android:theme="@style/DialogTheme" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+		<activity android:name=".util.RequestRefund_Dialog_Activity" android:theme="@style/DialogTheme" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+    	<activity android:name=".util.Dialog_inapp_Activity" android:theme="@style/DialogTheme" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+     
+		
+		<activity android:name="TapBoardActivity" android:windowSoftInputMode="stateHidden|adjustNothing"  android:screenOrientation="portrait" />
+	
+	  <activity android:name="HomeActivity" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait"/>
+       <!-- sell it module -->
+        
+       
+  		<activity  android:name=".sell.ItemDetails1" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait"/>
+        <activity  android:name=".sell.ItemDetails2" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait"/>
+        <activity  android:name=".sell.ItemDetails3" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".sell.TakePictureNew" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".sell.PicturePreviewActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".sell.SelectPitcherActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait"/>
+        <activity  android:name=".sell.VideoScreen" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait"/>
+        <activity android:name=".sell.AddQuickVideo" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait"  />
+        <activity android:name=".sell.VideoPreview" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait"  />
+        <activity android:name=".sell.PostItemActivity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait"  />
+        <activity android:name=".sell.SellItFasterActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait"  />
+        <activity android:name=".sell.SellItFasterContact" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait"  />
+		<activity android:name=".sell.DropBox" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait"  />
+	 	<activity android:name=".sell.PriviewListing" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+	    <activity android:name=".sell.Dialog_ebay_crag" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+	    <activity android:name=".sell.SharActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+		<activity android:name=".sell.nice" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <!-- sell it module -->
+
+        <!-- Shop it module Login -->
+       
+        <activity android:name=".Shop.MakeOffer" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.BillingAddressActivity" android:windowSoftInputMode="stateUnchanged" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.ProductDetails" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.ShippingAddressActivity" android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.CheckOutScreenActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+       	<activity android:name=".Shop.MapStoreActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.ChatActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.ShopScreen" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.BrouseListing" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.ListingActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.BrouseCategoryActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" /> 
+        <activity android:name=".Shop.LiveVideoPlayActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait"/>
+     	<activity android:name=".Shop.TumblrDemoActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.ShowFreindActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".Shop.VideoPreviewProductDetails" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+     	<activity android:name=".Shop.ReviewUser" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+    	<activity android:name=".Shop.MyListingActiveSoldExpireActivity" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" />
+    	
+       
+        <!--  <activity android:name=".Shop.ReviewUser" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="landscape" />
+       --> 
+        
+        <!-- Shop it module Login -->
+        
+        <!-- Check Out -->
+        
+        <activity android:name=".Shop.checkout.MainCheckOutFragmentActivity" android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" />
+     	<activity android:name=".Shop.checkout.OrderCompletedActivity" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+        
+        <!-- Check Out -->
+
+
+
+  	<!-- Make offer -->
+  
+        <activity android:name=".MakeOffer.MakeOfferActivity" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+     	<activity android:name=".MakeOffer.OfferRecieveActivity" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+     	<activity android:name=".MakeOffer.CounterOfferActivity" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+        <activity android:name=".MakeOffer.AcceptOffer_Buyer" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+        <activity android:name=".MakeOffer.DeclineOffer_Seller" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+        <activity android:name=".MakeOffer.DeclineOffer_Buyer" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+        <activity android:name=".MakeOffer.ViewAllOfferActivity" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+        <activity android:name=".MakeOffer.Exp_buy_OfferActivity" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+        <activity android:name=".MakeOffer.Exp_sell_OfferActivity" android:theme="@android:style/Theme.Dialog" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+        <activity android:name="com.convertingoffers.tapnsell.TapboardSell.ViewRecieveOfferActivity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+        <activity android:name=".MakeOffer.ChaChingActivity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" /> 
+  
+  	<!--Make offer-->
+          
+          
+    <!--TapBoard shop-->
+         
+      <activity android:name=".TapboardShop.TapInspireActivity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+      <activity android:name=".TapboardShop.TapBoardMyOrderList" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait"/>
+      <activity android:name=".TapboardShop.TapBoard_Order_Status" android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait"/>
+      <activity android:name=".TapboardShop.NewCaseActivity" android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+     
+  	<!-- TapBoard shop -->
+
+  	<!--TapBoard sell-->
+              
+        <activity android:name=".TapboardSell.TODOS_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+        <activity android:name=".TapboardSell.ItemToShip_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+        <activity android:name=".TapboardSell.ScheduleMeetup_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+        <activity android:name=".TapboardSell.MessageBoard_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+    	  <activity android:name=".TapboardSell.MessageBoard_ToDO_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+    <activity android:name=".TapboardSell.OpenCaseActivity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+    	<activity android:name=".TapboardSell.LeaveFeedback_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+    	<activity android:name=".TapboardSell.MyEarning_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+    	<activity android:name=".TapboardSell.MyListingActive_Sold_Expire_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+   		<activity android:name=".TapboardSell.ResolutionChatActivity"  android:windowSoftInputMode="stateHidden|adjustResize" android:screenOrientation="portrait" ></activity>
+	    <activity android:name=".TapboardSell.Promot_Listing_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+ 		<activity android:name=".TapboardSell.Tap_sell_SellItFasterContact_email"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+   			<activity android:name=".TapboardSell.Tap_sell_SellItFasterContact_sms"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+   		
+ 	<!--TapBoard sell-->
+                    
+ 	<!--TapBoard Footer-->
+		
+		<activity android:name=".TapboardFooter.Alert_list_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>           
+       	<activity android:name=".TapboardFooter.CodeEmail_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>   
+        <activity android:name=".TapboardFooter.CodePhone_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>   
+        <activity android:name=".TapboardFooter.Footer_ReviewUser"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+		<activity android:name=".TapboardFooter.MyAccount_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+		<activity android:name=".TapboardFooter.Setting_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+		<activity android:name=".TapboardFooter.Sound_Setting_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+		<activity android:name=".TapboardFooter.Suggetion_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>		
+		<activity android:name=".TapboardFooter.UpdatePassword_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>		
+		<activity android:name=".TapboardFooter.UpdatePaypal_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>		
+		<activity android:name=".TapboardFooter.VerifyEmail_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>		
+		<activity android:name=".TapboardFooter.VerifyPhone_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+		<activity android:name=".TapboardFooter.View_Tearm_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+		<activity android:name=".TapboardFooter.Help_Activity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+		<activity android:name=".TapboardFooter.ProfileHome_Dialog_Activity" android:theme="@style/DialogTheme" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+		<activity android:name=".TapboardFooter.TapSellReviewUser" android:theme="@style/DialogTheme" android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" />
+	
+	<!--TapBoard Footer-->
+          
+   	<!--Meetup Module -->
+   	
+           <activity android:name=".Meetup.ChouseMeetupActivity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+           <activity android:name=".Meetup.MeetupRequest"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+           <activity android:name=".Meetup.MeetupRequestdialogActivity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+           <activity android:name=".Meetup.SuggestMeetupActivity"  android:windowSoftInputMode="stateHidden|adjustNothing" android:screenOrientation="portrait" ></activity>
+           
+    <!--Meetup Module -->
+          
+  	<!-- Service And Activity of Paypal -->
+  	
+        <service android:name="com.paypal.android.sdk.payments.PayPalService" android:exported="false" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+ 	
+ 	<!-- Service And Activity of Paypal -->
+
+
+    <!-- Push Notification -->
+      
+        <receiver android:name="com.convertingoffers.tapnsell.push.NotificationRecieve" android:permission="com.google.android.c2dm.permission.SEND" >
+        <intent-filter> <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="com.convertingoffers.tapnsell" />
+        </intent-filter>
+        </receiver>
+    
+    <!-- Push Notification -->  
+           
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <activity android:name="com.facebook.LoginActivity" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/FaceBookAppID" />
+	    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/mapkey" />
+	   	
+	<!-- DropBox Integration -->
+    
+        <activity android:name="com.dropbox.client2.android.AuthActivity" android:launchMode="singleTask" android:configChanges="orientation|keyboard"><intent-filter>
+    
+    <!-- Change this to be db- followed by your app key 9dec9qf34xt80mt -->
+        <data android:scheme="db-vvwaatpdv0wvfdf" />
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <category android:name="android.intent.category.DEFAULT" /></intent-filter></activity>
+	<!-- DropBox Integration -->
+	
+	  <service android:name="ContactBackEndService" />
+	   <service android:name="BackEndService" />
+	 <!--   <activity android:name="com.helpshift.HSConversation" android:configChanges="orientation|screenSize|locale|layoutDirection" android:label="@string/hs__conversation_header" android:theme="@style/Helpshift.Theme.Activity" />
+       <activity android:name="com.helpshift.HSQuestionsList" android:configChanges="orientation|screenSize" android:theme="@style/Helpshift.Theme.Activity" />
+       <activity android:name="com.helpshift.HSQuestion" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:label="@string/hs__question_header" android:theme="@style/Helpshift.Theme.Activity" />
+       <activity android:name="com.helpshift.HSSection" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@style/Helpshift.Theme.Activity" android:windowSoftInputMode="adjustPan" />
+       <activity android:name="com.helpshift.HSFaqs" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:label="@string/hs__help_header" android:theme="@style/Helpshift.Theme.Activity" android:windowSoftInputMode="adjustPan" />
+       <activity android:name="com.helpshift.HSReview" android:configChanges="orientation|screenSize" android:theme="@style/Helpshift.Theme.Dialog" />
+       <activity android:name="com.helpshift.ScreenshotPreviewActivity" android:configChanges="orientation|screenSize" android:theme="@style/Helpshift.Theme.Activity" />
+       <activity android:name="com.helpshift.SearchResultActivity" android:configChanges="orientation|screenSize" android:theme="@style/Helpshift.Theme.Activity" />
+       <service android:name="com.helpshift.HSService" android:label="Helpshift Service"></service>
+       <service android:name="com.helpshift.HSRetryService" android:label="Helpshift Service"></service> -->
+       
+        <activity android:name="com.helpshift.HSConversation"
+              android:label="@string/hs__conversation_header"
+              android:configChanges="orientation|screenSize|locale|layoutDirection"
+              android:theme="@style/Theme.Helpshift"/>
+    <activity android:name="com.helpshift.HSQuestionsList"
+              android:theme="@style/Theme.Helpshift"
+              android:configChanges="orientation|screenSize"/>
+    <activity android:name="com.helpshift.HSQuestion"
+              android:label="@string/hs__question_header"
+              android:hardwareAccelerated="true"
+              android:configChanges="orientation|screenSize"
+              android:theme="@style/Theme.Helpshift" />
+    <activity android:name="com.helpshift.HSSection"
+              android:hardwareAccelerated="true"
+              android:configChanges="orientation|screenSize"
+              android:windowSoftInputMode="adjustPan"
+              android:theme="@style/Theme.Helpshift" />
+    <activity android:name="com.helpshift.HSFaqs"
+              android:label="@string/hs__help_header"
+              android:hardwareAccelerated="true"
+              android:configChanges="orientation|screenSize"
+              android:windowSoftInputMode="adjustPan"
+              android:theme="@style/Theme.Helpshift" />
+    <activity android:name="com.helpshift.HSReview"
+              android:configChanges="orientation|screenSize"
+              android:theme="@style/Theme.Helpshift.Translucent" />
+    <service
+        android:name="com.helpshift.HSService"
+        android:label="Helpshift Service"
+        >
+    </service>
+
+    <receiver android:name="com.helpshift.HelpshiftConnReceiver">
+      <intent-filter>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+      </intent-filter>
+    </receiver>
+
+    <service
+        android:name="com.helpshift.HSRetryService"
+        android:label="Helpshift Service">
+    </service>
+       
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="1204ea58dbc644c23c985a5aafffd095d3feb1a9"/>
+       
+     
+
+       </application>
+</manifest>

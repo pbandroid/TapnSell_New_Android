@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sat="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <com.convertingoffers.tapnsell.util.CustomTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/mylisting_active_top_bg"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/fifteen"
+        android:shadowColor="#50000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/eightteen"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rlCenter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/t_hundred"
+        android:layout_below="@+id/tvName"
+        android:layout_margin="7dp" >
+
+        <ImageView
+            android:id="@+id/ivDefault"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/list_item_image_frame"
+            android:scaleType="centerCrop" />
+  
+        <ImageView
+            android:id="@+id/ivAnnouces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/promot_tools_annoucement" />
+
+        <LinearLayout
+            android:id="@+id/llPromottool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/promot_tools_open_bg"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:weightSum="2"
+                android:orientation="vertical" >
+                 <ImageView
+                    android:id="@+id/ivSms"
+                  android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.1" />
+                   <ImageView
+                       android:id="@+id/ivEmail"
+                     android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+               android:weightSum="2"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/ivShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                   <ImageView
+                       android:id="@+id/ivClose"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

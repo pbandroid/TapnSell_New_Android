@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/ten"
+    android:paddingRight="@dimen/ten" >
+
+    <RelativeLayout
+        android:id="@+id/rlUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/product_details_comment_user_name_bg" >
+
+        <RelativeLayout
+            android:id="@+id/rlImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/product_details_comment_user_bg" >
+
+            <ImageView
+                android:id="@+id/ivComment"
+                android:layout_width="@dimen/fiftydp"
+                android:layout_height="@dimen/fiftydp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+              />
+         
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlImage"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/tvCommentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="test"
+                android:maxLength="5"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_toRightOf="@+id/rlUser"
+        android:background="@drawable/product_details_comment_tect_bg"
+        android:padding="@dimen/five" >
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fifteen"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>

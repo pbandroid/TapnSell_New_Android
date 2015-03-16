@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+     
+            <RelativeLayout
+                android:id="@+id/rlMain"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/change_meetup_bg_top" >
+
+                <ImageView
+                    android:id="@+id/ivLocationIcon"
+                    android:layout_width="@dimen/sixtyFivedp"
+                    android:layout_height="@dimen/sixtyFivedp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:src="@drawable/change_meetup_location_logo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivLocationIcon"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five"
+                    android:weightSum="5" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tvLocationName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Starbucks"
+                            android:textColor="#334153"
+                            android:textSize="@dimen/eightteen"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="Has suggested "
+                            android:textColor="#334153"
+                            android:textSize="@dimen/eightteen" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tvDistance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv1"
+                            android:singleLine="true"
+                            android:text="0.3 mi"
+                            android:gravity="center"
+                            android:textColor="#4196ff"
+                            android:textSize="@dimen/fifteen" />
+
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:src="@drawable/order_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+     

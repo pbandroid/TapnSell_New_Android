@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/order_list_child_bg"
+        android:paddingBottom="@dimen/five"
+        android:paddingLeft="@dimen/three"
+        android:paddingTop="@dimen/five"
+        android:weightSum="4" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8" >
+
+            <ImageView
+                android:id="@+id/ivUser"
+                android:layout_width="@dimen/hundreddp"
+                android:layout_height="@dimen/hundreddp"
+                android:src="@drawable/meetup_list_user_image" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/schedule_meetup_location" />
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Starbucks"
+                        android:singleLine="true"
+                        android:textColor="#4d5763"
+                        android:textSize="@dimen/eightteen"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:maxLines="2"
+                        android:paddingLeft="@dimen/five"
+                        android:text="asdad asdad asdsadas sadasd asdasd asdasdasd"
+                        android:textColor="#4d5763"
+                        android:textSize="@dimen/twelve"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/schedule_meetup_icon" />
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="10:35 am"
+                        android:textColor="#4d5763"
+                        android:textSize="@dimen/twelve"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.2"
+            android:background="@drawable/schedule_meetup_user_image_bg"
+            android:paddingLeft="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivUserImage"
+                android:layout_width="@dimen/ninetydp"
+                android:layout_height="@dimen/eightydp"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop" />
+
+           
+            <ImageView
+                android:id="@+id/ivChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/fiftydp"
+                android:src="@drawable/schedule_meetup_chat_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

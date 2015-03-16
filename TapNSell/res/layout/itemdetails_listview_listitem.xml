@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/fiftydp"
+    android:background="@drawable/order_list_child_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/ten"
+        android:paddingTop="@dimen/ten"
+        android:text="test"
+        android:textColor="#000000"
+        android:textSize="@dimen/twenty" />
+
+</RelativeLayout>

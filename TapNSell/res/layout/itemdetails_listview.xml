@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+       android:background="@drawable/login_dialog_bg"  >
+    
+<ListView
+    android:id="@+id/lvDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="5dp"
+    android:cacheColorHint="#00000000"
+    android:divider="@null"
+    android:dividerHeight="2dp"
+    android:fadingEdge="none"
+    android:listSelector="@android:color/transparent"
+    android:paddingBottom="@dimen/five"
+    android:paddingLeft="@dimen/five"
+    android:paddingRight="@dimen/five"
+    android:paddingTop="@dimen/five" >
+
+    </ListView>
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tb_bg"
+    android:gravity="center_horizontal" >
+
+    <include
+        android:id="@+id/rlheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <ImageView
+        android:id="@+id/ivStrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlheader"
+        android:scaleType="fitXY"
+        android:src="@drawable/suggest_feature_strip" />
+
+    <EditText
+        android:id="@+id/evSuggetion"
+        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlSuggetion"
+        android:layout_below="@+id/ivStrip"
+        android:layout_margin="@dimen/five"
+        android:background="@drawable/suggest_feature_ev"
+        android:gravity="top"
+        android:hint="Enter text here"
+        android:textStyle="italic"
+        android:padding="@dimen/five"
+        android:textColor="#737373"
+        android:textSize="@dimen/fifteen" />
+
+    <RelativeLayout
+        android:id="@+id/rlSuggetion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/ten"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:background="@drawable/suggest_feature_btn" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/suggest_submit_text" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

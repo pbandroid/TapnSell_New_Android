@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlmain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rlr"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <SurfaceView
+            android:id="@+id/surface_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/sixtydp"
+            android:clickable="false" />
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btncenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/videoplaybtn"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/ninetydp"
+            android:background="@drawable/flash_back"
+            android:paddingRight="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivFlashIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/twelve"
+                android:src="@drawable/flash_icon_off" />
+
+            <TextView
+                android:id="@+id/tvFlashText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_toRightOf="@+id/ivFlashIcon"
+                android:text="OFF"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlbottom"
+        android:background="@drawable/flash_back"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/twentyfive" />
+<ImageView
+            android:id="@+id/ivclsbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp" 
+             android:paddingTop="10dp"
+            
+            android:layout_marginTop="@dimen/eightteen"
+            android:src="@drawable/takepitcer_closebtn" />
+    <RelativeLayout
+        android:id="@+id/rlbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/capture_bg" >
+
+        <Button
+            android:id="@+id/btndelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="53dp"
+            android:background="@drawable/takevideo_deletebtn"
+            android:clickable="false"
+            android:enabled="false" />
+
+        <View
+            android:id="@+id/vw2"
+            android:layout_width="2dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginTop="41dp"
+            android:layout_toRightOf="@+id/btndelete"
+            android:background="#15ffffff" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/takepitcer_previeimg"
+            android:text="Start"
+            android:textColor="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/ivBlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/blinkbtn" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginTop="@dimen/sixtydp"
+            android:layout_toRightOf="@+id/vw2"
+            android:background="@drawable/takevideo_pausebtn"
+            android:clickable="false"
+            android:text="Pause"
+            android:textColor="@android:color/transparent"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/vw3"
+            android:layout_width="2dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="41dp"
+            android:layout_toLeftOf="@+id/btnfinish"
+            android:background="#15ffffff" />
+
+        <Button
+            android:id="@+id/btnfinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/takevideo_likebtn"
+            android:clickable="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

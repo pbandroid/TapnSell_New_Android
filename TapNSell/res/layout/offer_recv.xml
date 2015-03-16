@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_detail_bg" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:id="@+id/llShort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:orientation="horizontal"
+        android:background="@drawable/offer_recv_sort_bg"
+        android:weightSum="2" >
+
+        <ImageView
+            android:id="@+id/ivRecieve"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/ivMade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" 
+            />
+
+        
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_offer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/llShort"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginRight="@dimen/five"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent" >
+    </ListView>
+
+</RelativeLayout>

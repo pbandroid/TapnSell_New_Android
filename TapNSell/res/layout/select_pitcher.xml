@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+ 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include1"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/ten"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/five"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/ten"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:scaleType="centerCrop"
+              
+              />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#60000000" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/five"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/ten"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="@dimen/five"
+            android:layout_marginTop="@dimen/five"
+            android:weightSum="1" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginRight="@dimen/ten"
+                android:layout_weight="0.5"
+                android:background="#60000000" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_weight="0.5"
+                android:background="#60000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2" >
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/five"
+                android:layout_marginBottom="@dimen/ten"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/ten"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#60000000" />
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/five"
+                android:layout_marginBottom="@dimen/ten"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/ten"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+    </LinearLayout>
+ 
+</RelativeLayout>

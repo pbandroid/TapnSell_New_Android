@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginRight="@dimen/five"
+        android:layout_marginTop="@dimen/five"
+        android:background="@drawable/create_case_bg_top"
+        android:paddingLeft="@dimen/three"
+        android:paddingRight="@dimen/three" >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="What&apos;s the issue?"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fifteen" />
+
+        <LinearLayout
+            android:id="@+id/llSpinnerType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/three"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:layout_toRightOf="@+id/tv1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/tvspinnerType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.4"
+                android:background="@drawable/billing_country_bg"
+                android:clickable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:singleLine="true"
+                android:text="Never Recieved"
+                android:textColor="#444444"
+                android:textSize="@dimen/fifteen" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                android:background="@drawable/li_small_spinner2"
+                android:clickable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/aarraow"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTop"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginRight="@dimen/five"
+        android:background="@drawable/create_case_bg_center"
+        android:padding="@dimen/ten"
+        android:paddingRight="@dimen/three" >
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:text="Case Details:"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fifteen" />
+
+        <EditText
+            android:id="@+id/evDec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv2"
+            android:layout_marginBottom="@dimen/five"
+            android:layout_marginTop="@dimen/five"
+            android:background="@drawable/create_case_ev"
+            android:gravity="top"
+            android:hint=""
+            android:inputType="textMultiLine"
+            android:lines="10"
+            android:imeOptions="actionNone"
+            android:padding="@dimen/five"
+           android:scrollbars="vertical"
+            android:text=""
+            android:textSize="@dimen/fifteen" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBottam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlCenter"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginRight="@dimen/five"
+        android:background="@drawable/create_case_bottam"
+        android:padding="@dimen/five" >
+
+        <ImageView
+            android:id="@+id/ivAttach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_toLeftOf="@+id/ivCamera"
+            android:src="@drawable/create_case_attach" />
+
+        <ImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_toLeftOf="@+id/ivOpenCase"
+            android:src="@drawable/create_case_camera" />
+
+        <ImageView
+            android:id="@+id/ivOpenCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/five"
+            android:src="@drawable/create_case_open_case" />
+    </RelativeLayout>
+
+</RelativeLayout>

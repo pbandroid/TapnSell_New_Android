@@ -1,0 +1,293 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+       android:background="@drawable/mainbg"
+   >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:id="@+id/sl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginRight="@dimen/five"
+        android:layout_marginTop="@dimen/five" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checkout_shiiping_bg"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:paddingTop="@dimen/five" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/billing_address_top"
+                android:paddingBottom="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
+                android:layout_marginTop="@dimen/five" >
+
+                <RelativeLayout
+                    android:id="@+id/rlSame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:background="@drawable/billing_radio_bg" >
+
+                    <ImageView
+                        android:id="@+id/ivSameIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/billing_radio_bg1"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:text=" Same As Billing"
+                    android:textColor="@android:color/black"
+                    
+                    android:textSize="@dimen/twentyfive" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/five"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five"
+                android:weightSum="1" >
+
+                <EditText
+                    android:id="@+id/evFName"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/reg_ev_small"
+                    android:hint="First Name"
+                    android:inputType="textCapSentences"
+                    android:nextFocusDown="@+id/evLName"
+                    android:padding="@dimen/five"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/twenty"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/evLName"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/reg_ev_small"
+                    android:hint="Last Name"
+                    android:inputType="textCapSentences"
+                    android:maxLines="5"
+                    android:nextFocusDown="@+id/evAddress"
+                    android:padding="@dimen/five"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/twenty"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/evAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/five"
+                android:background="@drawable/reg_address"
+                android:hint="Address"
+                android:nextFocusDown="@+id/evMobileNo"
+                android:padding="@dimen/five"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:paddingLeft="@dimen/five"
+            android:paddingRight="@dimen/five"
+                android:singleLine="true"
+                android:textColor="#444444"
+                android:textSize="@dimen/twenty" />
+
+            <EditText
+                android:id="@+id/evAPT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/five"
+                android:background="@drawable/reg_address"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:hint="APT #,etc...."
+                android:nextFocusDown="@+id/evPassword"
+                android:padding="@dimen/five"
+                
+                android:singleLine="true"
+                android:textColor="#444444"
+                android:textSize="@dimen/twenty" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/five"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:weightSum="3" >
+
+                <LinearLayout
+                    android:id="@+id/llSpinnerCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_weight="1.8"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:id="@+id/tvspinnerCountry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.4"
+                        android:background="@drawable/li_small_spinner1"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint="Select Country"
+                        android:paddingLeft="@dimen/five"
+                        android:paddingRight="@dimen/five"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#444444"
+                        android:textSize="@dimen/twenty" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/li_small_spinner2"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/aarraow"
+                            android:clickable="false"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/evMobile"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/reg_ev_small"
+                    android:hint="Mobile"
+                    android:inputType="number"
+                    android:nextFocusDown="@+id/evCity"
+                    android:padding="@dimen/five"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/twenty" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/five"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:weightSum="3" >
+
+                <EditText
+                    android:id="@+id/evCity"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/three"
+                    android:layout_weight="1"
+                    android:background="@drawable/reg_state"
+                    android:hint="City"
+                    android:inputType="textCapSentences"
+                    android:nextFocusDown="@+id/evState"
+                    android:padding="@dimen/five"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/twenty" />
+
+                <EditText
+                    android:id="@+id/evState"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/three"
+                    android:layout_weight="1"
+                    android:background="@drawable/reg_ev_small"
+                    android:hint="State"
+                    android:inputType="textCapSentences"
+                    android:nextFocusDown="@+id/evZip"
+                    android:padding="@dimen/five"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/twenty" />
+
+                <EditText
+                    android:id="@+id/evZip"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/three"
+                    android:layout_weight="1"
+                    android:background="@drawable/reg_ev_small"
+                    android:hint="Zip"
+                    android:inputType="number"
+                    android:nextFocusDown="@+id/evEmail"
+                    android:padding="@dimen/five"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/twenty" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/evEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reg_address"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@+id/btnRegister"
+                android:padding="@dimen/five"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:textColor="#444444"
+                android:textSize="@dimen/twenty" />
+            
+             <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five"
+            android:src="@drawable/credit_info_next" />
+        </LinearLayout>
+
+       
+    </ScrollView>
+
+</RelativeLayout>

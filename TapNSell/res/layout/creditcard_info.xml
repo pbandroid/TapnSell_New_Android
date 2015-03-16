@@ -1,0 +1,380 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    android:gravity="center" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include1"
+        android:layout_margin="@dimen/three" >
+
+        <LinearLayout
+            android:id="@+id/llTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/credit_info_white_top_bg"
+            android:orientation="vertical" 
+            android:visibility="gone"
+            android:paddingBottom="@dimen/three">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.4"
+                            android:text="Card Number"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="0.1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:text="CVV2/CVC2"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5" >
+
+                        <EditText
+                            android:id="@+id/evCardNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.4"
+                            android:background="@drawable/credit_info_ev_card_no"
+                            android:paddingLeft="@dimen/three"
+                            android:paddingRight="@dimen/three"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:nextFocusDown="@+id/evCvv"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="0.1" />
+
+                        <EditText
+                            android:id="@+id/evCvv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:background="@drawable/credit_info_cvv"
+                            android:paddingLeft="@dimen/three"
+                            android:inputType="textPassword"
+                            android:paddingRight="@dimen/three"
+                            android:singleLine="true"
+                            android:nextFocusDown="@+id/evName"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/ten"
+                    android:src="@drawable/credit_info_credit_icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name on card"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <EditText
+                            android:id="@+id/evName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/credit_info_name"
+                            android:paddingLeft="@dimen/three"
+                            android:paddingRight="@dimen/three"
+                            android:imeOptions="actionNone"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expiration Date"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4" >
+
+                        <LinearLayout
+                            android:id="@+id/llSpinnerDayMonth"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/five"
+                            android:layout_weight="2.5"
+                            android:orientation="horizontal"
+                            android:weightSum="3" >
+
+                            <TextView
+                                android:id="@+id/tvspinnerDate"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="2.4"
+                                android:background="@drawable/credit_info_expiration_date"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center"
+                                android:hint="01 / January"
+                                android:paddingLeft="@dimen/five"
+                                android:paddingRight="@dimen/five"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textColorHint="@android:color/black"
+                                android:textSize="@dimen/twenty" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/li_small_spinner2"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/aarraow"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSpinnerYear"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/five"
+                            android:layout_weight="1.5"
+                            android:orientation="horizontal"
+                            android:weightSum="3" >
+
+                            <TextView
+                                android:id="@+id/tvspinnerYear"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="2"
+                                android:background="@drawable/credit_info_expiration_year"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center"
+                                android:hint="2014"
+                                android:paddingLeft="@dimen/five"
+                                android:paddingRight="@dimen/five"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textColorHint="@android:color/black"
+                                android:textSize="@dimen/twenty" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@drawable/li_small_spinner2"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/aarraow"
+                                    android:clickable="false"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llTop"
+            android:scaleType="fitXY"
+            android:src="@drawable/credit_info_billing_address_bg" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ivNext"
+            android:layout_below="@+id/iv1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:id="@+id/tblAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:stretchColumns="*" >
+                </TableLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAddNewAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/check_out_add_new_address_bg"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five"
+                    android:scaleType="fitXY" >
+
+                    <ImageView
+                        android:id="@+id/ivchk_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/check_out_add_new_address_add_icon" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                  		android:layout_marginLeft="@dimen/ten"
+                        android:layout_toRightOf="@+id/ivchk_icon"
+                        android:src="@drawable/check_out_add_new_address_add_account" />
+
+                </RelativeLayout>
+                <!-- check_out_add_new_address -->
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/five"
+            android:src="@drawable/credit_info_next" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMyorderMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/order_list_child_bg"
+    android:orientation="horizontal"
+    android:padding="@dimen/five" >
+
+    <ImageView
+        android:id="@+id/ivMyOrderImage"
+        android:layout_width="@dimen/sixtydp"
+        android:layout_height="@dimen/sixtydp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:src="@drawable/order_user_image" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ivOrderArrow"
+        android:layout_toRightOf="@+id/ivMyOrderImage"
+        android:paddingLeft="@dimen/five"
+        android:paddingRight="@dimen/five" >
+
+        <TextView
+            android:id="@+id/tvMyOrderItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#334153"
+            android:gravity="left"
+            
+            android:layout_toLeftOf="@+id/tvMyOrderPrice"
+            android:textSize="@dimen/eightteen"
+            android:text=" " />
+        
+        
+         <TextView
+            android:id="@+id/tvMyOrderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_below="@+id/tvMyOrderItemName"
+            android:textColor="#334153"
+            android:textSize="@dimen/fifteen"
+            android:text="11/22/2014" />
+         
+         <TextView
+            android:id="@+id/tvMyOrderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#334153"
+            android:maxLength="6"
+            android:layout_alignParentRight="true"
+            android:text="1234"
+            android:textSize="@dimen/fifteen"
+           />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivOrderArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/order_arrow" />
+
+</RelativeLayout>

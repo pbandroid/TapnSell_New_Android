@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_dialog_bg"
+        android:layout_centerInParent="true" >
+        </RelativeLayout>
+        
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@drawable/request_change_bg" />
+
+        <com.convertingoffers.tapnsell.util.CustomTextView
+            android:id="@+id/tvHeader_Dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@drawable/request_change_top"
+            android:gravity="center"
+            android:paddingLeft="@dimen/fifteen"
+            android:shadowColor="#50000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:singleLine="true"
+            android:text="Sign in to "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eightteen"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHeader_Dialog"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/ten"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <ImageView
+                android:id="@+id/ivTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:layout_weight="1"
+                android:src="@drawable/login_twitter" />
+
+            <ImageView
+                android:id="@+id/ivGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:layout_weight="1"
+                android:src="@drawable/login_google" />
+
+            <ImageView
+                android:id="@+id/ivFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:layout_weight="1"
+                android:src="@drawable/login_facebook" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@+id/tv1"
+                android:paddingBottom="@dimen/fifteen"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/five"
+                android:paddingTop="@dimen/fifteen"
+                android:text="Sign in"
+                android:textColor="#34abff"
+                android:textSize="@dimen/fifteen" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:paddingBottom="@dimen/fifteen"
+                android:paddingTop="@dimen/fifteen"
+                android:text=" with e-mail or "
+                android:textColor="#60000000"
+                android:textSize="@dimen/twelve" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/tv1"
+                android:paddingBottom="@dimen/fifteen"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/fifteen"
+                android:paddingTop="@dimen/fifteen"
+                android:singleLine="true"
+                android:text="Register"
+                android:textColor="#34abff"
+                android:textSize="@dimen/fifteen" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/request_change_close" />
+    </RelativeLayout>
+
+</RelativeLayout>

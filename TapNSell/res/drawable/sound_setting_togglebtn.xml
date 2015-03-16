@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+ <item android:state_checked="false"
+       android:drawable="@drawable/sound_setting_off_bg" /> <!-- unchecked off -->
+ <item android:drawable="@drawable/sound_setting_on_bg" /> <!-- default -->
+  <item android:state_checked="true" android:drawable="@drawable/sound_setting_toggleoff" /> <!-- pressed off-->
+</selector>

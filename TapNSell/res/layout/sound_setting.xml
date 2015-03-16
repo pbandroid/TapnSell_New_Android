@@ -1,0 +1,291 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include1"
+        android:orientation="vertical"
+        android:weightSum="8.5" >
+
+        <RelativeLayout
+            android:id="@+id/rlNewOffer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/order_list_child_bg"
+            android:paddingBottom="@dimen/five"
+            android:paddingTop="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivBlank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:padding="@dimen/five"
+                android:src="@drawable/sound_setting_newoffer_icon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_toRightOf="@+id/ivBlank"
+                android:src="@drawable/sound_setting_newoffer" />
+
+            <ToggleButton
+                android:id="@+id/tb_newOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/sound_setting_togglebtn"
+                android:textColor="@android:color/white"
+                android:textOff=""
+                android:textOn=""
+                android:textSize="@dimen/fifteen"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMessage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/order_list_child_bg"
+            android:paddingBottom="@dimen/five"
+            android:paddingTop="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivBlank1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:padding="@dimen/five"
+                android:src="@drawable/sound_setting_message_icon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_toRightOf="@+id/ivBlank1"
+                android:src="@drawable/sound_setting_message" />
+
+            <ToggleButton
+                android:id="@+id/tb_Message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/sound_setting_togglebtn"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen"
+                 android:textOff=""
+                android:textOn=""
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMeetUp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/order_list_child_bg"
+            android:paddingBottom="@dimen/five"
+            android:paddingTop="@dimen/five" >
+
+       
+<ImageView
+                android:id="@+id/ivBlank2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:padding="@dimen/ten"
+                android:src="@drawable/sound_setting_meetup_request_icon" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_toRightOf="@+id/ivBlank2"
+                android:src="@drawable/sound_setting_meetup_request" />
+
+            <ToggleButton
+                android:id="@+id/tb_MeetUpRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/sound_setting_togglebtn"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen"
+                 android:textOff=""
+                android:textOn=""
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCase_notification"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/order_list_child_bg"
+            android:paddingBottom="@dimen/five"
+            android:paddingTop="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivBlank3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:padding="@dimen/five"
+                android:src="@drawable/sound_setting_case_notification_icon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_toRightOf="@+id/ivBlank3"
+                android:src="@drawable/sound_setting_case_notification" />
+
+            <ToggleButton
+                android:id="@+id/tb_CaseNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/sound_setting_togglebtn"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen"
+                 android:textOff=""
+                android:textOn=""
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlItemSold"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/order_list_child_bg"
+            android:paddingBottom="@dimen/five"
+            android:paddingTop="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivBlank4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:padding="@dimen/five"
+                android:src="@drawable/sound_setting_item_sold_icon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_toRightOf="@+id/ivBlank4"
+                android:src="@drawable/sound_setting_item_sold" />
+
+            <ToggleButton
+                android:id="@+id/tb_ItemSold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/sound_setting_togglebtn"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen"
+                 android:textOff=""
+                android:textOn=""
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTracking"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/order_list_child_bg"
+            android:paddingBottom="@dimen/five"
+            android:paddingTop="@dimen/five" >
+
+            <ImageView
+                android:id="@+id/ivBlank5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:padding="@dimen/five"
+                android:src="@drawable/sound_setting_tracking_icon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_toRightOf="@+id/ivBlank5"
+                android:src="@drawable/sound_setting_tracking" />
+
+            <ToggleButton
+                android:id="@+id/tb_Tracking_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_marginRight="@dimen/five"
+                android:background="@drawable/sound_setting_togglebtn"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/fifteen"
+                 android:textOff=""
+                android:textOn=""
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

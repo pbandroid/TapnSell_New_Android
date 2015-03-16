@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_dialog_bg"
+    android:paddingLeft="@dimen/five"
+    android:paddingRight="@dimen/five" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/five"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/dialog_bg" />
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+       
+            android:paddingRight="@dimen/fifteen"
+            android:src="@drawable/custom_dialog_transparent_bg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv1"
+            android:orientation="vertical"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:maxLines="3"
+                android:paddingLeft="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:text=" asdjkash asgfdhas dasgfh hafjas dhs gfasgd dsfsdfs"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fifteen" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/five"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_weight="1"
+                android:background="@drawable/custom_dialog_with_no_yes"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/ivYes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                   />
+
+                <ImageView
+                    android:id="@+id/ivNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
